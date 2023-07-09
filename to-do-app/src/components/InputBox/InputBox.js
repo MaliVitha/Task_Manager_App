@@ -1,16 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import style from './InputBox.module.css';
 
 const InputBox = () => {
+  const [typedWord, setTypedWord] = useState('');
 
-  let typedWord;
   const clickHandler = () => {
     console.log(typedWord);
   }
 
   const typeHandler = (event) => {
-console.log(event.target.value);
-typedWord =event.target.value;
+    console.log(event.target.value);
+    // typedWord =event.target.value;
+    setTypedWord(event.target.value);
   }
 
   return (
